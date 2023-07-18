@@ -5599,10 +5599,8 @@ PERFORMANCE OF THIS SOFTWARE.
             gallery.addEventListener("lgBeforeOpen", (() => {
                 pageLockToggle();
             }));
-            gallery.addEventListener("lgBeforeClose", (() => {
-                setTimeout((() => {
-                    pageLockToggle();
-                }), 100);
+            gallery.addEventListener("lgAfterClose", (() => {
+                pageLockToggle();
             }));
         }
     }
